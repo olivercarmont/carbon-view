@@ -104,7 +104,7 @@ export function CarbonEmissionsChart() {
                 style={{ backgroundColor: entry.color }}
               ></div>
               <p className="">
-                {entry.name}: <span className="font-bold">{entry.value.toFixed(2)} MT</span>
+                {entry.name}: <span className="font-bold">{entry.value.toFixed(2)} MMT</span>
               </p>
             </div>
           ))}
@@ -136,7 +136,7 @@ export function CarbonEmissionsChart() {
         fontSize={12}
         fontWeight="bold"
       >
-        {`${dataKey}: ${value.toFixed(1)}`}
+        {`${dataKey}: ${value.toFixed(1)} MMT`}
       </text>
     );
   };
@@ -152,8 +152,8 @@ export function CarbonEmissionsChart() {
         {companiesData.companies.find((company: Company) => company.id === selectedCompany)?.fullName}
       </CardTitle>
       <CardDescription className="text-base mt-1">
-        Scope 1, 2, and 3 emissions over time
-      </CardDescription>
+    Scope 1, 2, and 3 Emissions
+</CardDescription>
     </div>
     <div className="sm:mt-0">
       <div className="text-sm text-muted-foreground mb-3">
@@ -198,7 +198,7 @@ export function CarbonEmissionsChart() {
                 tickMargin={8}
               />
               <YAxis
-                tickFormatter={(value) => `${value.toFixed(0)} MT`}
+                tickFormatter={(value) => `${value.toFixed(0)} MMT`}
                 axisLine={false}
                 tickLine={false}
               />
@@ -278,6 +278,7 @@ export function CarbonEmissionsChart() {
           <div className='leading-none text-muted-foreground'>
             Showing emissions data from {formattedData[0]?.year} to {formattedData[formattedData.length - 1]?.year}
           </div>
+         
         </CardFooter>
       )}
     </Card>
