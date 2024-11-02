@@ -1,0 +1,29 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Company {
+  id        String    @id
+  name      String
+  fullName  String
+  emissions Emission[]
+}
+
+model Emission {
+  id        String   @id @default(cuid())
+  year      Int
+  scope1    Float
+  scope2    Float
+  scope3    Float
+  companyId String
+  company   Company  @relation(fields: [companyId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([companyId])
+}
