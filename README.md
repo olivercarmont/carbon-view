@@ -1,6 +1,6 @@
 # Carbon View: Corporate Emissions Tracker
 
-![Carbon View](./readme-img.png)
+![Carbon View](./readme-img-2.png)
 
 ## Overview
 
