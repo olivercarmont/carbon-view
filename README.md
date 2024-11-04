@@ -62,8 +62,6 @@ Carbon View is a Next.js application with GraphQL, Prisma, and PostgreSQL on Ama
 
 7. Open [http://localhost:3000](http://localhost:3000)
 
-[Rest of README remains the same...]
-
 ## Data Sources
 
 All emissions data is sourced from official corporate sustainability reports:
