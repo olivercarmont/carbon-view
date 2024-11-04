@@ -2,6 +2,8 @@
 
 ![Carbon View](./readme-img-2.png)
 
+[Website](https://carbonview.netlify.app)
+
 ## Overview
 
 Carbon View is a Next.js application with GraphQL, Prisma, and PostgreSQL on Amazon RDS that visualizes corporate environmental impact through interactive emissions data charts.
